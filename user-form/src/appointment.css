@@ -1,0 +1,116 @@
+/* appointment.css */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  margin: 0;
+  padding: 0;
+}
+
+.app-container,
+.confirmation-container,
+.doctor-selection-container,
+.doctor-appointment {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.doctor-appointment,
+.confirmation-container,
+.doctor-selection-container {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+h2,
+h3 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.3s;
+  margin-bottom: 15px;
+}
+
+input[type="text"]:focus {
+  border-color: #6a11cb;
+  outline: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 10px;
+  margin-bottom: 8px;
+  background: #f0f0f0;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+li:hover {
+  background: #e0e0e0;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+  margin-top: 15px;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.status {
+  margin-top: 15px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.success {
+  color: green;
+}
+
+.fail {
+  color: red;
+}
+
+.doctor-info p,
+.appointment-info p {
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+strong {
+  font-weight: 600;
+}

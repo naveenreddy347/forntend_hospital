@@ -1,0 +1,134 @@
+/* App.css */
+ 
+/* Common Container */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  padding: 20px;
+}
+ 
+/* Form Styling */
+.form {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+ 
+.form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+ 
+.form-group {
+  margin-bottom: 15px;
+}
+ 
+.form-group label {
+  font-weight: 500;
+  margin-bottom: 5px;
+  display: block;
+}
+ 
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+ 
+.form-group input:focus {
+  border-color: #6a11cb;
+  outline: none;
+}
+ 
+.error {
+  font-size: 12px;
+  color: red;
+  margin-top: 5px;
+}
+ 
+button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+ 
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+ 
+button:hover:not(:disabled) {
+  opacity: 0.9;
+}
+ 
+.status {
+  margin-top: 15px;
+  text-align: center;
+  font-weight: 500;
+}
+ 
+.success {
+  color: green;
+}
+ 
+.fail {
+  color: red;
+}
+ 
+/* Doctor Selection Styles */
+.doctor-selection-container {
+  max-width: 500px;
+  margin: auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+ 
+.doctor-list {
+  list-style: none;
+  padding: 0;
+}
+ 
+.doctor-list li {
+  padding: 10px;
+  margin-bottom: 8px;
+  background: #f9f9f9;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+ 
+.doctor-list li:hover {
+  background: #e6e6ff;
+}
+ 
+.doctor-info {
+  margin-top: 15px;
+}
+ 
+/* Confirmation Page */
+.confirmation-container {
+  max-width: 500px;
+  margin: auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
