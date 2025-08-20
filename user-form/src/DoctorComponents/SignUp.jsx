@@ -12,6 +12,7 @@ export default function SignUp() {
     const { name, value } = e.target;
     setDoctor({ ...doctor, [name]: value });
   };
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault();

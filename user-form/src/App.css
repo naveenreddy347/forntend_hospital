@@ -1,15 +1,16 @@
 /* App.css */
- 
+
 /* Common Container */
 .app-container {
   min-height: 100vh;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
   padding: 20px;
 }
- 
+
 /* Form Styling */
 .form {
   background: #fff;
@@ -19,23 +20,23 @@
   max-width: 400px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
- 
+
 .form h2 {
   text-align: center;
   margin-bottom: 20px;
   color: #333;
 }
- 
+
 .form-group {
   margin-bottom: 15px;
 }
- 
+
 .form-group label {
   font-weight: 500;
   margin-bottom: 5px;
   display: block;
 }
- 
+
 .form-group input {
   width: 100%;
   padding: 10px;
@@ -44,18 +45,18 @@
   font-size: 14px;
   transition: border-color 0.3s;
 }
- 
+
 .form-group input:focus {
   border-color: #6a11cb;
   outline: none;
 }
- 
+
 .error {
   font-size: 12px;
   color: red;
   margin-top: 5px;
 }
- 
+
 button {
   width: 100%;
   padding: 12px;
@@ -67,30 +68,30 @@ button {
   cursor: pointer;
   transition: opacity 0.3s;
 }
- 
+
 button:disabled {
   opacity: 0.6;
   cursor: not-allowed;
 }
- 
+
 button:hover:not(:disabled) {
   opacity: 0.9;
 }
- 
+
 .status {
   margin-top: 15px;
   text-align: center;
   font-weight: 500;
 }
- 
+
 .success {
   color: green;
 }
- 
+
 .fail {
   color: red;
 }
- 
+
 /* Doctor Selection Styles */
 .doctor-selection-container {
   max-width: 500px;
@@ -100,12 +101,12 @@ button:hover:not(:disabled) {
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
- 
+
 .doctor-list {
   list-style: none;
   padding: 0;
 }
- 
+
 .doctor-list li {
   padding: 10px;
   margin-bottom: 8px;
@@ -114,15 +115,15 @@ button:hover:not(:disabled) {
   cursor: pointer;
   transition: background 0.2s;
 }
- 
+
 .doctor-list li:hover {
   background: #e6e6ff;
 }
- 
+
 .doctor-info {
   margin-top: 15px;
 }
- 
+
 /* Confirmation Page */
 .confirmation-container {
   max-width: 500px;
@@ -131,4 +132,176 @@ button:hover:not(:disabled) {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Group */
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.button-group button {
+  flex: 1;
+}
+
+.appointment-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.appointment-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  width: 250px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logout-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background-color: #c9302c;
+}
+
+.layout-container {
+  display: flex;
+  height: 100vh;
+  position: relative;
+}
+
+.hamburger {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.sidebar {
+  width: 0;
+  overflow-x: hidden;
+  transition: 0.3s;
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-right: 1px solid #ccc;
+  height: 100vh;
+  position: fixed;
+  z-index: 999;
+}
+
+.sidebar.open {
+  width: 250px;
+}
+
+.sidebar h3 {
+  margin-top: 0;
+}
+
+.appointment-list {
+  list-style: none;
+  padding-left: 0;
+}
+.layout-container {
+  display: flex;
+  height: 100vh;
+  position: relative;
+}
+
+.hamburger {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  font-size: 28px;
+  cursor: pointer;
+  z-index: 1000;
+  background-color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-right: 1px solid #ccc;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  overflow-y: auto;
+}
+
+.sidebar h3, .sidebar h4 {
+  margin-top: 0;
+}
+
+.appointment-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+.appointment-list li {
+  margin-bottom: 10px;
+  background: #e8f5e9;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin-left: 60px;
+}
+
+.doctor-selection-box {
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  background-color: #fafafa;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.doctor-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.doctor-item {
+  cursor: pointer;
+  background-color: white;
+  padding: 10px;
+  margin-bottom: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.doctor-item.selected {
+  background-color: #e0f7fa;
+}
+
+.doctor-info {
+  margin-top: 20px;
 }
