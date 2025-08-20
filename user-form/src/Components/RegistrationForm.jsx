@@ -15,7 +15,7 @@ export default function RegistrationForm() {
   });
   const [errors, setErrors] = useState({});
   const navigate = useNavigate();
-
+  
   function handleChange(e) {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -49,12 +49,13 @@ export default function RegistrationForm() {
 
       if (res.ok) {
         const data = await res.json();
-        const userId = data.id; // Adjust this if your backend uses a different key
+        const userId = data.id;
 
-        console.log("✅ Registered userId:", userId); // ✅ Debug line
+        console.log("✅ Registered userId:", userId);
 
-        localStorage.setItem("userId", userId); // Optional: store for later use
-        navigate(`/doctors/${userId}`); // Navigate to DoctorSelection
+        localStorage.setItem("userId", userId);
+        navigate("/login-user");
+
       } else {
         alert("Registration failed");
       }
@@ -78,17 +79,20 @@ export default function RegistrationForm() {
               onChange={handleChange}
               placeholder={
                 field === "name" ? "Enter your name" :
-                field === "age" ? "Enter your age" :
-                field === "address" ? "Enter your address" :
-                field === "weight" ? "Enter your weight" :
-                field === "email" ? "Enter your email" :
-                field === "password" ? "Enter a password" : ""
+                  field === "age" ? "Enter your age" :
+                    field === "address" ? "Enter your address" :
+                      field === "weight" ? "Enter your weight" :
+                        field === "email" ? "Enter your email" :
+                          field === "password" ? "Enter a password" : ""
               }
             />
             {errors[field] && <p className="error">{errors[field]}</p>}
           </div>
         ))}
-        <button type="submit">Register</button>
+        <div className="button-group">
+          <button type="submit">Register</button>
+          <button type="button" onClick={() => navigate("/login-user")}>Login</button>
+        </div>
       </form>
     </div>
   );
