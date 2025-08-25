@@ -47,7 +47,7 @@
 }
 
 .form-group input:focus {
-  border-color: #6a11cb;
+  border-color: #09cba5;
   outline: none;
 }
 
@@ -60,7 +60,7 @@
 button {
   width: 100%;
   padding: 12px;
-  background: linear-gradient(to right, #6a11cb, #2575fc);
+  background: linear-gradient(to right, #056d56, #77e7c0);
   color: white;
   border: none;
   border-radius: 6px;
@@ -183,45 +183,6 @@ button:hover:not(:disabled) {
 }
 
 .hamburger {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  font-size: 24px;
-  cursor: pointer;
-  z-index: 1000;
-}
-
-.sidebar {
-  width: 0;
-  overflow-x: hidden;
-  transition: 0.3s;
-  background-color: #f4f4f4;
-  padding: 20px;
-  border-right: 1px solid #ccc;
-  height: 100vh;
-  position: fixed;
-  z-index: 999;
-}
-
-.sidebar.open {
-  width: 250px;
-}
-
-.sidebar h3 {
-  margin-top: 0;
-}
-
-.appointment-list {
-  list-style: none;
-  padding-left: 0;
-}
-.layout-container {
-  display: flex;
-  height: 100vh;
-  position: relative;
-}
-
-.hamburger {
   position: fixed;
   top: 10px;
   left: 10px;
@@ -231,7 +192,7 @@ button:hover:not(:disabled) {
   background-color: #fff;
   padding: 5px 10px;
   border-radius: 4px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
 .sidebar {
@@ -247,7 +208,8 @@ button:hover:not(:disabled) {
   overflow-y: auto;
 }
 
-.sidebar h3, .sidebar h4 {
+.sidebar h3,
+.sidebar h4 {
   margin-top: 0;
 }
 
@@ -268,19 +230,19 @@ button:hover:not(:disabled) {
   flex: 1;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   padding: 20px;
-  margin-left: 60px;
+  overflow-y: auto;
 }
 
 .doctor-selection-box {
-  max-width: 500px;
+  max-width: 600px;
   width: 100%;
   text-align: center;
   background-color: #fafafa;
   padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .doctor-list {
@@ -304,4 +266,13 @@ button:hover:not(:disabled) {
 
 .doctor-info {
   margin-top: 20px;
+}
+
+.footer {
+  background-color: #f8f8f8;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+  border-top: 1px solid #ddd;
 }
