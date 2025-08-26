@@ -53,24 +53,25 @@ export default function UserLogin() {
       <form className="form" onSubmit={handleLogin}>
         <h2>User Login</h2>
         <div className="form-group">
-          <label>Email:</label>
-          <input
-            type="text"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Enter your email"
-          />
-        </div>
+  <label>Email:</label>
+  <input
+    type="text"
+    value={email}
+    onChange={(e) => setEmail(e.target.value)}
+    placeholder="📧 Enter your email"
+  />
+</div>
 
-        <div className="form-group">
-          <label>Password:</label>
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            placeholder="Enter your password"
-          />
-        </div>
+<div className="form-group">
+  <label>Password:</label>
+  <input
+    type="password"
+    value={password}
+    onChange={(e) => setPassword(e.target.value)}
+    placeholder="🔒 Enter your password"
+  />
+</div>
+
 
         <button type="submit">Login</button>
       </form>

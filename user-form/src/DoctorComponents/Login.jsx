@@ -123,25 +123,28 @@ export default function DoctorLogin() {
       <form className="form" onSubmit={handleLogin}>
         <h2>Doctor Login</h2>
         <div className="form-group">
-          <label>Doctor Name</label>
-          <input
-            type="text"
-            name="name"
-            value={credentials.name}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label>Password</label>
-          <input
-            type="password"
-            name="password"
-            value={credentials.password}
-            onChange={handleChange}
-            required
-          />
-        </div>
+  <label>Doctor Name</label>
+  <input
+    type="text"
+    name="name"
+    value={credentials.name}
+    onChange={handleChange}
+    placeholder="👨‍⚕️ Enter doctor name"
+    required
+  />
+</div>
+<div className="form-group">
+  <label>Password</label>
+  <input
+    type="password"
+    name="password"
+    value={credentials.password}
+    onChange={handleChange}
+    placeholder="🔒 Enter password"
+    required
+  />
+</div>
+
         <button type="submit">Login</button>
         {loginStatus === "success" && (
           <p className="status success">Login successful!</p>

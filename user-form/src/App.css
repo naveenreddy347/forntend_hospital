@@ -11,6 +11,7 @@
   padding: 20px;
 }
 
+
 /* Form Styling */
 .form {
   background: #fff;
@@ -60,13 +61,20 @@
 button {
   width: 100%;
   padding: 12px;
-  background: linear-gradient(to right, #056d56, #77e7c0);
+  background: linear-gradient(to right, #00bcd4, #2196f3);
   color: white;
   border: none;
   border-radius: 6px;
   font-size: 15px;
   cursor: pointer;
-  transition: opacity 0.3s;
+  transition: opacity 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover effect */
+button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 button:disabled {
@@ -276,3 +284,4 @@ button:hover:not(:disabled) {
   color: #333;
   border-top: 1px solid #ddd;
 }
+
