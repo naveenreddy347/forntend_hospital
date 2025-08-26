@@ -1,5 +1,5 @@
 .form-wrapper {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Times New Roman", 'Times New Roman', Times, serif;
   background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
   min-height: 100vh;
   display: flex;
@@ -34,12 +34,30 @@
   font-size: 14px;
 }
 
- 
+
 .form {
   background: white;
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
+}
+
+/* Apply green text color to all table cells */
+.doctor-table thead tr {
+  background-color: rgb(177, 237, 240);
+}
+
+/* Optional: Add border and padding for better visibility */
+.doctor-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.doctor-table th,
+.doctor-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
 }

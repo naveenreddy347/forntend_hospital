@@ -12,9 +12,10 @@
 .admin-box {
     width: 180px;
     height: 180px;
-    background: linear-gradient(to right, #6a11cb, #2575fc);
+    background: linear-gradient(to right, #4cac39,#41AB5D);
     color: white;
     font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
     font-weight: 500;
     display: flex;
     align-items: center;

@@ -1,9 +1,9 @@
 .header {
-  background-color: #00bcd4;
+  background-color: #008000;
   padding: 15px 30px;
   color: white;
-  font-family: 'Segoe UI', sans-serif;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  font-family: 'Times New Roman', Times, serif;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .header-container {
