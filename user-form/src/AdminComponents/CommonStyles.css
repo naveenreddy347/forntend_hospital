@@ -34,7 +34,6 @@
   font-size: 14px;
 }
 
- 
 .form {
   background: white;
   padding: 30px;
@@ -42,4 +41,21 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 400px;
+}
+
+/* Teal shaded Create button inside form */
+.form button[type="submit"] {
+  background:  linear-gradient(to right, #00bcd4, #2196f3);/* Teal gradient */
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.form button[type="submit"]:hover {
+  background:  linear-gradient(to right, #00bcd4, #2196f3); /* Darker teal gradient */
 }

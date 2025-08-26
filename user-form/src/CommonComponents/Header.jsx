@@ -24,7 +24,7 @@ export default function Header() {
         <nav className="nav-links">
           <Link to="/">Home</Link>
           <Link to="/about">About</Link>
-          <Link to="/contact">Contact</Link>
+          
 
           {/* Conditional Links */}
           {isLoggedIn && role === "user" && (

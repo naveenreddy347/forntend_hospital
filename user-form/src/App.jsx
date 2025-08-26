@@ -92,6 +92,7 @@ import DoctorAppointments from "./DoctorComponents/DoctorAppointments";
 
 import Header from "./CommonComponents/Header";
 import Footer from "./CommonComponents/Footer";
+import AboutPage from "./AboutComponents/AboutPage";
 import "./App.css";
 
 export default function App() {
@@ -116,6 +117,9 @@ export default function App() {
       <Route path="/delete-user" element={<DeleteUser />} />
       <Route path="/view-doctors" element={<ViewDoctors />} />
       <Route path="/view-users" element={<ViewUsers />} />
+      {/* Aboutpage Routes */}
+      <Route path="/about" element={<AboutPage />} />
+
 
         {/* Doctor Routes */}
         <Route path="/doctor/login" element={<Login />} />

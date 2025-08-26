@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./CommonStyles.css";
 
-
 const CreateDoctor = () => {
     const [name, setName] = useState("");
     const [designation, setDesignation] = useState("");
@@ -11,18 +10,12 @@ const CreateDoctor = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        const doctorData = {
-            name: name,
-            designation: designation,
-            password: password,
-        };
+        const doctorData = { name, designation, password };
 
         try {
             const response = await fetch("http://localhost:8080/admin/doctor", {
                 method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
+                headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(doctorData),
             });
 
@@ -35,9 +28,7 @@ const CreateDoctor = () => {
     };
 
     return (
-
         <div className="form-wrapper">
-
             <div className="form">
                 <h2>Create Doctor</h2>
                 <form onSubmit={handleSubmit}>
@@ -46,6 +37,7 @@ const CreateDoctor = () => {
                         <input
                             value={name}
                             onChange={(e) => setName(e.target.value)}
+                            placeholder="👨‍⚕️ Enter doctor's name"
                             required
                         />
                     </div>
@@ -54,6 +46,7 @@ const CreateDoctor = () => {
                         <input
                             value={designation}
                             onChange={(e) => setDesignation(e.target.value)}
+                            placeholder="🏥 Enter specialty"
                             required
                         />
                     </div>
@@ -63,6 +56,7 @@ const CreateDoctor = () => {
                             type="password"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
+                            placeholder="🔒 Enter password"
                             required
                         />
                     </div>

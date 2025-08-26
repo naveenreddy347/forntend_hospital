@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./CommonStyles.css";
+
 const CreateUser = () => {
   const [name, setName] = useState("");
   const [age, setAge] = useState("");
@@ -8,19 +9,19 @@ const CreateUser = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
- 
+
   const handleSubmit = async (e) => {
     e.preventDefault();
- 
+
     const userData = {
-      name: name,
+      name,
       age: parseInt(age),
-      address: address,
+      address,
       weight: parseFloat(weight),
-      email: email,
-      password: password,
+      email,
+      password,
     };
- 
+
     try {
       const response = await fetch("http://localhost:8080/admin/users", {
         method: "POST",
@@ -29,7 +30,7 @@ const CreateUser = () => {
         },
         body: JSON.stringify(userData),
       });
- 
+
       const result = await response.json();
       setMessage(`User created successfully with ID: ${result.userid}`);
     } catch (error) {
@@ -37,42 +38,77 @@ const CreateUser = () => {
       setMessage("Failed to create user.");
     }
   };
- 
+
   return (
     <div className="form-wrapper">
-    <div className="form">
-      <h2>Create User</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label>Name</label>
-          <input value={name} onChange={(e) => setName(e.target.value)} required />
-        </div>
-        <div className="form-group">
-          <label>Age</label>
-          <input type="number" value={age} onChange={(e) => setAge(e.target.value)} required />
-        </div>
-        <div className="form-group">
-          <label>Address</label>
-          <input value={address} onChange={(e) => setAddress(e.target.value)} required />
-        </div>
-        <div className="form-group">
-          <label>Weight</label>
-          <input type="number" step="0.1" value={weight} onChange={(e) => setWeight(e.target.value)} required />
-        </div>
-        <div className="form-group">
-          <label>Email</label>
-          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-        </div>
-        <div className="form-group">
-          <label>Password</label>
-          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
-        </div>
-        <button type="submit">Create</button>
-      </form>
-      {message && <p>{message}</p>}
-    </div>
+      <div className="form">
+        <h2>Create User</h2>
+        <form onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label>Name</label>
+            <input
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              placeholder="👤 Enter name"
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label>Age</label>
+            <input
+              type="number"
+              value={age}
+              onChange={(e) => setAge(e.target.value)}
+              placeholder="🎂 Enter age"
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label>Address</label>
+            <input
+              value={address}
+              onChange={(e) => setAddress(e.target.value)}
+              placeholder="🏠 Enter address"
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label>Weight</label>
+            <input
+              type="number"
+              step="0.1"
+              value={weight}
+              onChange={(e) => setWeight(e.target.value)}
+              placeholder="⚖️ Enter weight"
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label>Email</label>
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="📧 Enter email"
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label>Password</label>
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              placeholder="🔒 Enter password"
+              required
+            />
+          </div>
+          <button type="submit">Create</button>
+        </form>
+        {message && <p>{message}</p>}
+      </div>
     </div>
   );
 };
- 
+
 export default CreateUser;

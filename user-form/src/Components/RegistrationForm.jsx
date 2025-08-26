@@ -77,14 +77,15 @@ export default function RegistrationForm() {
               name={field}
               value={formData[field]}
               onChange={handleChange}
-              placeholder={
-                field === "name" ? "Enter your name" :
-                  field === "age" ? "Enter your age" :
-                    field === "address" ? "Enter your address" :
-                      field === "weight" ? "Enter your weight" :
-                        field === "email" ? "Enter your email" :
-                          field === "password" ? "Enter a password" : ""
-              }
+             placeholder={
+  field === "name" ? "👤 Enter your name" :
+  field === "age" ? "🎂 Enter your age" :
+  field === "address" ? "🏠 Enter your address" :
+  field === "weight" ? "⚖️ Enter your weight" :
+  field === "email" ? "📧 Enter your email" :
+  field === "password" ? "🔒 Enter a password" : ""
+}
+
             />
             {errors[field] && <p className="error">{errors[field]}</p>}
           </div>
