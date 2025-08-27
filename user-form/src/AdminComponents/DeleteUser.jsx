@@ -8,17 +8,26 @@ const DeleteUser = () => {
   const handleDelete = async (e) => {
     e.preventDefault();
 
-    try {
-      const response = await fetch(`http://localhost:8080/admin/users/${userId}`, {
-        method: "DELETE",
+    fetch(`http://localhost:8080/api/users/${userId}`, {
+      method: "DELETE",
+    })
+      .then((response) => {
+        if (response.ok) {
+          return response.text();
+        } else {
+          return response.text().then((errorText) => {
+            throw new Error(`Failed to delete user: ${errorText}`);
+          });
+        }
+      })
+      .then((text) => {
+        setMessage(`✅ User deleted successfully: ${text}`);
+      })
+      .catch((error) => {
+        console.error("Error deleting user:", error);
+        setMessage("❌ An error occurred while deleting the user.");
       });
 
-      const text = await response.text();
-      setMessage(text);
-    } catch (error) {
-      console.error("Error deleting user:", error);
-      setMessage("An error occurred while deleting the user.");
-    }
   };
 
   return (

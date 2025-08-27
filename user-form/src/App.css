@@ -243,15 +243,14 @@ button:hover:not(:disabled) {
   overflow-y: auto;
 }
 
+
 .doctor-selection-box {
-  max-width: 600px;
-  width: 100%;
-  text-align: center;
-  background-color: #fafafa;
-  padding: 30px;
-  border-radius: 10px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 
 .doctor-list {
   list-style: none;
@@ -285,3 +284,76 @@ button:hover:not(:disabled) {
   border-top: 1px solid #ddd;
 }
 
+.appointments-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.appointments-table th,
+.appointments-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+.appointments-table th {
+  background-color: #f0f0f0;
+}
+
+.prescription-row {
+  background-color: #f9f9f9;
+}
+
+.inline-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+}
+
+.inline-form input {
+  padding: 8px;
+  width: 100%;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.prescription-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.prescription-table th,
+.prescription-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+.prescription-table th {
+  background-color: #f4f4f4;
+}
+
+.prescription-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.prescription-table th,
+.prescription-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+.prescription-table th {
+  background-color: #f4f4f4;
+}
