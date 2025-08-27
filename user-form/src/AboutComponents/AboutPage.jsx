@@ -17,7 +17,7 @@ const AboutPage = () => (
       <h1>Welcome to HospitalCare</h1>
       <p>Compassionate Care, Advanced Medicine, Close to Home.</p>
     </header>
-
+{/* likki writing this */}
     <section className="about-intro">
       <h2>About Us</h2>
       <p>
